@@ -18,7 +18,7 @@ const clothingSchema = new mongoose.Schema({
   // Add validation for database to only be able to add sell or donate
   status: {
     type: String,
-    enum: ['Sell', 'Donate'],
+    enum: ['Pending', 'Sell', 'Donate'],
     required: false
   },
   owner: {
@@ -27,7 +27,13 @@ const clothingSchema = new mongoose.Schema({
     required: true
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  toObject: {
+    virtuals: true
+  },
+  toJSON: {
+    virtuals: true
+  }
 })
 
 // Virtual Attributes
