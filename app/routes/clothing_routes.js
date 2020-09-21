@@ -47,7 +47,7 @@ router.get('/clothes', requireToken, (req, res, next) => {
 // GET /clothes/5a7db6c74d55bc51bdf39793
 router.get('/clothes/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
-  Clothing.findById()
+  Clothing.findById(req.params.id)
     .then(handle404)
     // if `findById` is succesful, respond with 200 and "clothing" JSON
     .then(clothing => res.status(200).json({ clothing: clothing.toObject() }))
