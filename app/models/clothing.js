@@ -21,6 +21,10 @@ const clothingSchema = new mongoose.Schema({
     enum: ['Pending', 'Sell', 'Donate'],
     required: false
   },
+  todaysDate: {
+    type: Date,
+    required: true
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -37,9 +41,17 @@ const clothingSchema = new mongoose.Schema({
 })
 
 // Virtual Attributes
-//
-// clothingSchema.virtual('statusChoice').get(function () {
-//   return
-// })
+
+clothingSchema.virtual('isOld').get(function () {
+  const createdDate = new Date(this.todaysDate)
+  const presentDate = new Date(Date.now())
+  const diffInTime = presentDate.getTime() - createdDate.getTime()
+  const diffInDays = diffInTime / (1000 * 3600 * 24)
+  if (Math.abs(diffInDays) < 30) {
+    return false
+  } else {
+    return true
+  }
+})
 
 module.exports = mongoose.model('Clothing', clothingSchema)

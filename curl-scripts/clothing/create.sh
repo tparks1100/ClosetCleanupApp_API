@@ -10,6 +10,7 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
     "clothing": {
+      "todaysDate": "'"${TODAYSDATE}"'"
       "category": "'"${CATEGORY}"'",
       "clothingDescription": "'"${CLOTHINGDESCRIPTION}"'",
       "isWorn": "'"${ISWORN}"'",
