@@ -10,9 +10,9 @@ This app is called Closet Cleanup. It is an app that tells you if you need to le
 
 ## Important Links
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+- [Other Repo](https://github.com/tparks1100/ClosetCleanupApp_CLIENT)
+- [Deployed API](https://pure-shelf-15332.herokuapp.com/)
+- [Deployed Client](https://tparks1100.github.io/ClosetCleanupApp_CLIENT/)
 
 ## Planning Story
 
@@ -28,37 +28,25 @@ There will be different list views that show "Listed Clothing", "Donated Clothin
 
 ### Technologies Used
 
-- jQuery
-- HTML/CSS
-- Bootstrap
-- Javascript
+- Mongoose
+- MongoDB
+- Express
+
 
 ### Catalog of Routes
 
 Verb         |	URI Pattern
 ------------ | -------------
-GET | /resources
-GET | /resources/:id
-POST | /resources
-PATCH | /resources/:id
-DELETE | /resources/:id
+GET | /clothes
+POST | /clothes
+PATCH | /clothes/:id
+DELETE | /clothes/:id
 
 ### Unsolved Problems
 
-- Still need to ....
-- Would like to eventually ....
+- Still need to get my virtuals to function how I want it to.
 
 ## Images
-
-#### App Screenshot:
-![screenshot](https://media.idownloadblog.com/wp-content/uploads/2017/07/Select-Instagram-story-to-save-to-iPhone.jpeg)
-
----
-
-#### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
-
----
 
 #### ERD:
 ![alt text](https://i.imgur.com/wecRiY4.png "ClosetCleanup ERD")
