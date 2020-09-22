@@ -37,6 +37,10 @@ There will be different list views that show "Listed Clothing", "Donated Clothin
 
 Verb         |	URI Pattern
 ------------ | -------------
+POST | /sign-up
+POST | /sign-in
+DELETE | /sign-out
+PATCH | /change-password
 GET | /clothes
 POST | /clothes
 PATCH | /clothes/:id
