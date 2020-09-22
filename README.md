@@ -31,6 +31,7 @@ There will be different list views that show "Listed Clothing", "Donated Clothin
 - Mongoose
 - MongoDB
 - Express
+- Javascript
 
 
 ### Catalog of Routes
